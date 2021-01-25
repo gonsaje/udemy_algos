@@ -5,9 +5,12 @@
 
 Same level: add | Inside: multiply
 
+
+### Time Complexity
+
 Constants don't matter:
 
-* (O(2n) => O(n);
+* O(2n) => O(n);
 * O(500) => O(1);
 * O(13n²) => O(n²);
 * O(n + 10) => O(n);
@@ -24,3 +27,16 @@ Constant Time O(1):
 
 Linear Time O(n):
 * Loops (When number of operations grow based on n)
+
+
+
+
+### Space Complexity
+
+Most primitives are constant space
+* booleans, numbers, undefined, null
+
+Strings require O(n) space (n is based on string's length)
+
+Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+

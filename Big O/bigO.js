@@ -156,3 +156,48 @@ function logAtMost5(n) { // O(1);
 // O(25) => O(1)
 // O(n² + n³) => O(n³)
 // O(n + n + n + n) => O(n)
+
+// Space Complexity
+
+// Most primitives are constant space
+    // booleans, numbers, undefined, null
+
+// Strings require O(n) space (n is based on string's length)
+// Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
+
+function sum(arr) { // O(1) space
+    let total = 0; // 1 total value no matter what
+    for (let i = 0; i < arr.length; i++) { // 1 value of i at a time
+        total += arr[i];
+    }
+
+    return total;
+}
+
+
+function double(arr) { // O(n) space
+    let newArr = []; // this array gets longer based on the input
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push(arr[i] * 2);
+    }
+
+    return newArr;
+}
+
+// Logarithms ₀₁₂₃₄₅₆₇₈₉
+
+// logarithm is an opposite of expnents
+
+// log₂(8) => 3   |   2³ => 8
+
+// Omit the subscript
+// We care more about the trend
+
+// log₂ => log
+
+// log(8) => 3
+// an algo with log(n) time is great!
+// an algo with O(nlog(n)) is better than n²
+
+
+
