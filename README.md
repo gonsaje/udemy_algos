@@ -1,5 +1,4 @@
-# JavaScript Algorithms and Data Structures Masterclass
-(Based on the JavaScript DS & A course)
+# JavaScript Algorithms and Data Structures 
 
 ## Big O
 ### Rules of Thumb:
