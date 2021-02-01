@@ -64,35 +64,33 @@
 
     // Anagram challenge:
         /* 
-            Given 2 strings, write a function validAnagrams(str1, str2) to determine if the
-            second string is an anagram of the first. An anagram is a word, phrase, or name
-            formed by rearranging the letters of another, such as cinema, formed from iceman
-
+        Given 2 strings, write a function validAnagrams(str1, str2) to determine if the
+        second string is an anagram of the first. An anagram is a word, phrase, or name
+        formed by rearranging the letters of another, such as cinema, formed from iceman
         */
 
-        // Freq Counter Solution
         // O(N) space | O(N) time
-        function validAnagrams(str1, str2) {
-            if (str1.length !== str2.length) return false; // O(1) time
+        // function validAnagrams(str1, str2) {
+        //     if (str1.length !== str2.length) return false; // O(1) time
 
-            let freq1 = {}; // O(N) space
-            let freq2 = {}; // O(N) space
+        //     let freq1 = {}; // O(N) space
+        //     let freq2 = {}; // O(N) space
 
-            for (let char of str1) { // O(N) time
-                freq1[char] === undefined ? freq1[char] = 1 : freq1[char]++; // O(1) time
-            }
+        //     for (let char of str1) { // O(N) time
+        //         freq1[char] === undefined ? freq1[char] = 1 : freq1[char]++; // O(1) time
+        //     }
 
-            for (let char of str2) { // O(N) time
-                freq2[char] === undefined ? freq2[char] = 1 : freq2[char]++; // O(1) time
-            }
+        //     for (let char of str2) { // O(N) time
+        //         freq2[char] === undefined ? freq2[char] = 1 : freq2[char]++; // O(1) time
+        //     }
 
-            for (let key in freq1) { // O(N) time
-                if (freq2[key] === undefined) return false; // O(1) time
-                if (freq1[key] !== freq2[key]) return false; // O(1) time
-            }
+        //     for (let key in freq1) { // O(N) time
+        //         if (freq2[key] === undefined) return false; // O(1) time
+        //         if (freq1[key] !== freq2[key]) return false; // O(1) time
+        //     }
 
-            return true;
-        }
+        //     return true;
+        // }
 
         // Output: 
         console.log(validAnagrams("", "")); // true
@@ -103,35 +101,50 @@
         console.log(validAnagrams("qwerty", "qeywrt")); // true
         console.log(validAnagrams("texttwisttime", "timetwisttext")); // true
 
+        // Other solution
+        function validAnagrams(str1, str2) {
+            if (str1.length !== str2.length) return false; // O(1) time
+
+            let freq = {};
+
+            for (let char of str1) { // O(N) time
+                freq[char] === undefined ? freq[char] = 1 : freq[char]++; // O(1) time
+            }
+
+            for (let char of str2) { // O(N) time
+                if (!freq[char]) {
+                    return false;
+                } else {
+                    freq[char] -= 1;
+                }
+            }
+
+          
+
+            return true;
+        }
+
+        
 
 
 
-// MULTIPLE POINTERS
-
-
-
-
-// SLIDING WINDOW
-
-
-
-
-// DIVIDE AND CONQUER
 
 
 
 
 
-// DYNAMIC PROGRAMMING
 
 
 
 
 
-// GREEDY ALGORITHMS
 
 
 
 
 
-// BACKTRACKING
+
+
+
+
+
