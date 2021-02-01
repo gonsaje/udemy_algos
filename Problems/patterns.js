@@ -57,9 +57,52 @@
         }
 
         // Output:
-        console.log(same([1,2,3], [4,1,9])) // true
-        console.log(same([1,2,3], [1,9])) // false
-        console.log(same([1,2,1], [4,4,1])) // false (must be same frequency)
+        // console.log(same([1,2,3], [4,1,9])) // true
+        // console.log(same([1,2,3], [1,9])) // false
+        // console.log(same([1,2,1], [4,4,1])) // false (must be same frequency)
+
+
+    // Anagram challenge:
+        /* 
+            Given 2 strings, write a function validAnagrams(str1, str2) to determine if the
+            second string is an anagram of the first. An anagram is a word, phrase, or name
+            formed by rearranging the letters of another, such as cinema, formed from iceman
+
+        */
+
+        // Freq Counter Solution
+        // O(N) space | O(N) time
+        function validAnagrams(str1, str2) {
+            if (str1.length !== str2.length) return false; // O(1) time
+
+            let freq1 = {}; // O(N) space
+            let freq2 = {}; // O(N) space
+
+            for (let char of str1) { // O(N) time
+                freq1[char] === undefined ? freq1[char] = 1 : freq1[char]++; // O(1) time
+            }
+
+            for (let char of str2) { // O(N) time
+                freq2[char] === undefined ? freq2[char] = 1 : freq2[char]++; // O(1) time
+            }
+
+            for (let key in freq1) { // O(N) time
+                if (freq2[key] === undefined) return false; // O(1) time
+                if (freq1[key] !== freq2[key]) return false; // O(1) time
+            }
+
+            return true;
+        }
+
+        // Output: 
+        console.log(validAnagrams("", "")); // true
+        console.log(validAnagrams("aaz", "zza")); // false
+        console.log(validAnagrams("anagram", "nagaram")); // true
+        console.log(validAnagrams("rat", "car")); // false
+        console.log(validAnagrams("awesome", "awesom")); // false
+        console.log(validAnagrams("qwerty", "qeywrt")); // true
+        console.log(validAnagrams("texttwisttime", "timetwisttext")); // true
+
 
 
 

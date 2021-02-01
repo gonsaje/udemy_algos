@@ -156,7 +156,7 @@ function charCount(str) {
 }
 
 // possible improvements
-// use a for of loop rather than traditional for loop
+// use a for-of loop rather than traditional for loop
 // use ternary instead of if else
 
 function charCount(str) {
