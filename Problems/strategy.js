@@ -16,7 +16,7 @@
 
 // PROBLEM SOLVING STEPS:
 
-// 1. UNDERSTAND THE PROBLEM
+// 1. UNDERSTAND THE PROBLEM/////////////////////////////////////////
 
     // Can I restate the problem in my own words?
     // - What are the inputs that go into the problem?
@@ -37,7 +37,8 @@
 }
 
 
-// 2. EXPLORE CONCRETE EXAMPLES
+
+// 2. EXPLORE CONCRETE EXAMPLES//////////////////////////////////
     // - Helps understand better
     // - provides sanity checks that evenual solution works how it should
     // User stories
@@ -65,7 +66,11 @@
 
     charCount(null) // what happens here?
 
-    // 3. BREAK IT DOWN
+
+
+
+
+// 3. BREAK IT DOWN ////////////////////////////////////////////////
 
     // - Explicitly write out the steps you need to take
 
@@ -86,7 +91,11 @@
     // Shows that you're capable of formulating an apporach even if you dont finish
 
 
-// 4. SOLVE/SIMPLIFY
+
+
+
+
+// 4. SOLVE/SIMPLIFY /////////////////////////////////////////
 
     // Solve the problem if you can
     // If you can't solve a simpler problem
@@ -127,7 +136,10 @@
     
 
 
-// 5. LOOK BACK AND REFACTOR
+
+
+
+// 5. LOOK BACK AND REFACTOR ///////////////////////////////////////
 
 
     // Can you check the result?
