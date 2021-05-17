@@ -35,7 +35,7 @@ function strSearch(longStr, pattern) {
 }
 
 console.log(strSearch("wowomgzomg", "omg"))
-console.log(strSearch("hello, my name is ellen degeneres", "ell"))
+console.log(strSearch("hello, my name is ellen degeneres and when I ring this bell, everything will go well", "ell"))
 console.log(strSearch("take me to your leader on the planet of earth or mars", "o"))
 // console.log(strSearch("wowomgzomg", "omg"))
 // console.log(strSearch("wowomgzomg", "omg"))
