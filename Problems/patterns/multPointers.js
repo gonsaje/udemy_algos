@@ -38,11 +38,8 @@ function sumZero(nums) {
 
     while (i < j) {
         if (nums[i] + nums[j] === 0) return [nums[i], nums[j]];
-        if (nums[i] + nums[j] > 0) {
-            j--;
-        } else {
-            i++;
-        }
+        else if (nums[i] + nums[j] > 0) j--;
+        else i++;
     }
 }
 
